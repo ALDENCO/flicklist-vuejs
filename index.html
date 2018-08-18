@@ -19,13 +19,31 @@
         <h2>My Watchlist</h2>
         <hr/>
       </header>
-
+      <div v-for="movie in watchlistItems" id="section.watchlist">
       <ul>
+       
+        <li>{{movie.title}}</li>
         <!--
         TODO 7
         Make an <li> for each movie in watchList
         -->
+      </div>
       </ul>
+      </section>
+    <section id = "section-browse">
+    <header>
+    <h2>Browse Movies</h2>
+    <hr/>
+  </header>
+    <ul>
+      <div v-for="movie in browseItems" id="section.browse">
+        
+        <li>{{movie.title}}</li><button v-on:click="AddtoWatchlist(movie)">Add to Watchlist</button>
+       
+      </div>
+
+    </ul>
+
     </section>
 
     <!--
